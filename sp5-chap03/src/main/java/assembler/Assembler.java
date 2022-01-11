@@ -1,4 +1,4 @@
-package spring.assembler;
+package assembler;
 
 import spring.ChangePasswordService;
 import spring.MemberDao;

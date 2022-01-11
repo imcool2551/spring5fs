@@ -1,22 +1,20 @@
-package spring.main;
+package main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.*;
-import spring.config.AppConf1;
-import spring.config.AppConf2;
-import spring.config.AppCtx;
+import config.AppCtx;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainForSpring2 {
+public class MainForSpring {
 
     private static ApplicationContext ctx = null;
 
     public static void main(String[] args) throws IOException {
-        ctx = new AnnotationConfigApplicationContext(AppConf1.class, AppConf2.class);
+        ctx = new AnnotationConfigApplicationContext(AppCtx.class);
 
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));

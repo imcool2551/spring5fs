@@ -1,9 +1,9 @@
-package spring.main;
+package main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.*;
-import spring.config.AppCtx;
+import config.AppCtx;
 
 import java.io.BufferedReader;
 import java.io.IOException;

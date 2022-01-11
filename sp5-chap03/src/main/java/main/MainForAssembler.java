@@ -1,21 +1,15 @@
-package spring.main;
+package main;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.*;
-import spring.config.AppConfImport;
+import assembler.Assembler;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainForImport {
-
-    private static ApplicationContext ctx = null;
+public class MainForAssembler {
 
     public static void main(String[] args) throws IOException {
-        ctx = new AnnotationConfigApplicationContext(AppConfImport.class);
-
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));
         while (true) {
@@ -24,32 +18,27 @@ public class MainForImport {
             if (command.equalsIgnoreCase("exit")) {
                 System.out.println("종료합니다");
                 break;
-            } else if (command.startsWith("new ")) {
+            }
+            if (command.startsWith("new ")) {
                 processNewCommand(command.split(" "));
                 continue;
-            } else if (command.startsWith("change ")) {
+            }
+            if (command.startsWith("change ")) {
                 processChangeCommand(command.split(" "));
-                continue;
-            } else if (command.startsWith("list")) {
-                processListCommand();
-                continue;
-            } else if (command.startsWith("info ")) {
-                processInfoCommand(command.split(" "));
-                continue;
-            } else if (command.startsWith("version")) {
-                processVersionCommand();
                 continue;
             }
             printHelp();
         }
     }
 
+    private static Assembler assembler = new Assembler();
+
     private static void processNewCommand(String[] arg) {
         if (arg.length != 5) {
             printHelp();
             return;
         }
-        MemberRegisterService regSvc = ctx.getBean("memberRegSvc", MemberRegisterService.class);
+        MemberRegisterService regSvc = assembler.getMemberRegisterService();
         RegisterRequest req = new RegisterRequest();
         req.setEmail(arg[1]);
         req.setName(arg[2]);
@@ -74,7 +63,7 @@ public class MainForImport {
             return;
         }
         ChangePasswordService changePasswordSvc =
-                ctx.getBean("changePwdSvc", ChangePasswordService.class);
+                assembler.getChangePasswordService();
         try {
             changePasswordSvc.changePassword(arg[1], arg[2], arg[3]);
             System.out.println("암호를 변경했습니다.\n");
@@ -83,28 +72,6 @@ public class MainForImport {
         } catch (WrongIdPasswordException e) {
             System.out.println("이메일과 암호가 일치하지 않습니다.\n");
         }
-    }
-
-    private static void processListCommand() {
-        MemberListPrinter listPrinter =
-                ctx.getBean("listPrinter", MemberListPrinter.class);
-        listPrinter.printAll();
-    }
-
-    private static void processInfoCommand(String[] arg) {
-        if (arg.length != 2) {
-            printHelp();
-            return;
-        }
-        MemberInfoPrinter infoPrinter =
-                ctx.getBean("infoPrinter", MemberInfoPrinter.class);
-        infoPrinter.printMemberInfo(arg[1]);
-    }
-
-    private static void processVersionCommand() {
-        VersionPrinter versionPrinter =
-                ctx.getBean("versionPrinter", VersionPrinter.class);
-        versionPrinter.print();
     }
 
     private static void printHelp() {

@@ -1,4 +1,4 @@
-package spring.config;
+package config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,9 +19,7 @@ public class AppCtx {
 
     @Bean
     public ChangePasswordService changePwdSvc() {
-        ChangePasswordService pwdSvc = new ChangePasswordService();
-        pwdSvc.setMemberDao(memberDao());
-        return pwdSvc;
+        return new ChangePasswordService();
     }
 
     @Bean

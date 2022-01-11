@@ -24,17 +24,17 @@ public class MainForSpring {
             if (command.equalsIgnoreCase("exit")) {
                 System.out.println("종료합니다");
                 break;
-            }
-            if (command.startsWith("new ")) {
+            } else if (command.startsWith("new ")) {
                 processNewCommand(command.split(" "));
                 continue;
-            }
-            if (command.startsWith("change ")) {
+            } else if (command.startsWith("change ")) {
                 processChangeCommand(command.split(" "));
                 continue;
-            }
-            if (command.startsWith("list")) {
+            } else if (command.startsWith("list")) {
                 processListCommand();
+                continue;
+            } else if (command.startsWith("info ")) {
+                processInfoCommand(command.split(" "));
                 continue;
             }
             printHelp();
@@ -88,6 +88,15 @@ public class MainForSpring {
         listPrinter.printAll();
     }
 
+    private static void processInfoCommand(String[] arg) {
+        if (arg.length != 2) {
+            printHelp();
+            return;
+        }
+        MemberInfoPrinter infoPrinter =
+                ctx.getBean("infoPrinter", MemberInfoPrinter.class);
+        infoPrinter.printMemberInfo(arg[1]);
+    }
 
     private static void printHelp() {
         System.out.println();

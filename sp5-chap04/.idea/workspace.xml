@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbb7f40b-31b5-4d2e-9067-8bcf9845259d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../sp5-chap06/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/aspect/CacheAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/aspect/ExeTimeAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/chap07/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/chap07/ExeTimeCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/chap07/ImpeCaculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/chap07/RecCaculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/config/AppCtx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/config/AppCtxWithCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/main/MainAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/main/MainAspectWithCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/main/MainProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

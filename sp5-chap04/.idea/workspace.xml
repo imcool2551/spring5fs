@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbb7f40b-31b5-4d2e-9067-8bcf9845259d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/config/AppCtx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/main/MainForSpring.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/ChangePasswordService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/DuplicateMemberException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/MemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/MemberInfoPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/MemberListPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/MemberNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/MemberPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/MemberRegisterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/MemberSummaryPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/VersionPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap05/src/main/java/spring/WrongIdPasswordException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap06/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

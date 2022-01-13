@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbb7f40b-31b5-4d2e-9067-8bcf9845259d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/aspect/CacheAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/aspect/ExeTimeAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/chap07/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/chap07/ExeTimeCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/chap07/ImpeCaculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/chap07/RecCaculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/config/AppCtx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/config/AppCtxWithCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/main/MainAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/main/MainAspectWithCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sp5-chap07/src/main/java/main/MainProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp5-chap08/src/main/java/main/MainForMemberDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sp5-chap08/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sp5-chap08/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sp5-chap08/src/main/java/config/AppCtx.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sp5-chap08/src/main/java/config/AppCtx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sp5-chap08/src/main/java/spring/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sp5-chap08/src/main/java/spring/MemberDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,21 +1,24 @@
 package spring;
 
+import org.springframework.transaction.annotation.Transactional;
+
 public class ChangePasswordService {
 
-    private MemberDao memberDao;
+	private MemberDao memberDao;
 
-    public void changePassword(String email, String oldPwd, String newPwd) {
-        Member member = memberDao.selectByEmail(email);
-        if (member == null) {
-            throw new MemberNotFoundException();
-        }
+	@Transactional
+	public void changePassword(String email, String oldPwd, String newPwd) {
+		Member member = memberDao.selectByEmail(email);
+		if (member == null)
+			throw new MemberNotFoundException();
 
-        member.changePassword(oldPwd, newPwd);
+		member.changePassword(oldPwd, newPwd);
 
-        memberDao.update(member);
-    }
+		memberDao.update(member);
+	}
 
-    public void setMemberDao(MemberDao memberDao) {
-        this.memberDao = memberDao;
-    }
+	public void setMemberDao(MemberDao memberDao) {
+		this.memberDao = memberDao;
+	}
+
 }

@@ -10,12 +10,12 @@ public class DbConfig {
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {
 		DataSource ds = new DataSource();
-		ds.setDriverClassName("com.mysql.jdbc.Driver");
-		ds.setUrl("jdbc:mysql://localhost/spring5fs?characterEncoding=utf8");
-		ds.setUsername("spring5");
-		ds.setPassword("spring5");
+		ds.setDriverClassName("org.h2.Driver");
+		ds.setUrl("jdbc:h2:tcp://localhost/~/spring5fs");
+		ds.setUsername("sa");
 		ds.setInitialSize(2);
 		ds.setMaxActive(10);
+		ds.setMaxIdle(10);
 		ds.setTestWhileIdle(true);
 		ds.setMinEvictableIdleTimeMillis(60000 * 3);
 		ds.setTimeBetweenEvictionRunsMillis(10 * 1000);

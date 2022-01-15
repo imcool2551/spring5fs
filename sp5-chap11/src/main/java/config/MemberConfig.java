@@ -3,7 +3,10 @@ package config;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import spring.AuthService;
 import spring.ChangePasswordService;
 import spring.MemberDao;
 import spring.MemberRegisterService;
@@ -28,6 +31,13 @@ public class MemberConfig {
     }
 
     @Bean
+    public PlatformTransactionManager transactionManager() {
+        DataSourceTransactionManager tm = new DataSourceTransactionManager();
+        tm.setDataSource(dataSource());
+        return tm;
+    }
+
+    @Bean
     public MemberDao memberDao() {
         return new MemberDao(dataSource());
     }
@@ -44,4 +54,10 @@ public class MemberConfig {
         return pwdSvc;
     }
 
+    @Bean
+    public AuthService authService() {
+        AuthService authService = new AuthService();
+        authService.setMemberDao(memberDao());
+        return authService;
+    }
 }

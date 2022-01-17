@@ -72,4 +72,17 @@ public class ControllerConfig {
     public CommonExceptionHandler commonExceptionHandler() {
         return new CommonExceptionHandler();
     }
+
+    @Bean
+    public RestMemberController restApi() {
+        RestMemberController cont = new RestMemberController();
+        cont.setMemberDao(memberDao);
+        cont.setRegisterService(memberRegSvc);
+        return cont;
+    }
+
+    @Bean
+    public ApiExceptionAdvice apiExceptionAdvice() {
+        return new ApiExceptionAdvice();
+    }
 }

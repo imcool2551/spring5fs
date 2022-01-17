@@ -1,5 +1,6 @@
 package config;
 
+import common.CommonExceptionHandler;
 import controller.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -65,5 +66,10 @@ public class ControllerConfig {
         MemberDetailController controller = new MemberDetailController();
         controller.setMemberDao(memberDao);
         return controller;
+    }
+
+    @Bean
+    public CommonExceptionHandler commonExceptionHandler() {
+        return new CommonExceptionHandler();
     }
 }
